@@ -1,12 +1,12 @@
 <template>
-  <h1>{{ msg }}</h1>
+  <h1>{{ title }}</h1>
 </template>
 
 <script>
 export default {
-  name: "secondVue",
+  name: "headerVue",
   props: {
-    msg: String,
+    title: String,
   },
 };
 </script>

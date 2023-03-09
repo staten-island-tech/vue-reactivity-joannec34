@@ -1,21 +1,16 @@
 <template>
-  <secondVue msg="hello" />
-  <secondVue msg="goodbye" />
+  <headerVue title="hello" />
+  <cardVue title="animals" />
 </template>
 
 <script>
-import secondVue from "./components/secondVue.vue";
-
+import headerVue from "./components/headerVue.vue";
+import cardVue from "./components/cardVue.vue";
 export default {
   name: "mainVue",
   components: {
-    secondVue,
-  },
-  data() {
-    return {
-      people:"ur mom", "ur dad",
-      places: "house"
-    };
+    headerVue,
+    cardVue,
   },
 };
 </script>
