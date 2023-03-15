@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <h2 v-if="graduated">{{ student }}</h2>
-    <h2 v-else>{{ student }} did not graduate</h2>
-    <ul>
-      <li v-for="animal in animals" :key="animal">{{ animal }}</li>
-    </ul>
+    <h1>{{ name }}</h1>
+    <h2>${{ price }}</h2>
+    <img :src="image" alt="" />
+    <h2 v-if="stocked">{{ name }} is in stock</h2>
+    <h2 v-else>{{ name }} is not in stock</h2>
   </div>
 </template>
 
@@ -13,15 +12,15 @@
 export default {
   name: "cardVue",
   props: {
-    title: String,
-    student: String,
+    name: String,
+    price: Number,
+    stocked: Boolean,
+    image: String,
   },
-  data() {
-    return {
-      //students: ["cynthia", "natalie"],
-      graduated: false,
-      animals: ["cat", "dog", "rat"],
-    };
+  computed: {
+    getImage: function () {
+      return this.image;
+    },
   },
 };
 </script>
@@ -31,5 +30,9 @@ div {
   background-color: aqua;
   padding: 20px;
   margin: 20px;
+}
+img {
+  height: 100px;
+  width: auto;
 }
 </style>

@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import homeVue from "../src/views/homeVue.vue";
+import homeVue from "./views/homeVue.vue";
 
 export default {
-  name: "mainVue",
+  name: "appVue",
   components: {
     homeVue,
   },

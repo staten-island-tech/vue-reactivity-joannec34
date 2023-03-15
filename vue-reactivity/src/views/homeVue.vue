@@ -1,12 +1,16 @@
 <template>
-  <div class="home">
-    <buttonVue></buttonVue>
-    <headerVue title="hello" />
+  <headerVue title="hello" />
+  <buttonVue></buttonVue>
 
-    <div class="cards">
-      <cardVue title="animals" student="cynthia" />
-      <cardVue title="animals2" student="natalie" />
-    </div>
+  <div class="cards">
+    <cardVue
+      v-for="product in products"
+      :key="product.name"
+      :name="product.name"
+      :price="product.price"
+      :stocked="product.stocked"
+      :image="product.url"
+    />
   </div>
 </template>
 
@@ -27,15 +31,21 @@ export default {
       products: [
         {
           name: "apple",
+          url: "https://www.shutterstock.com/image-photo/red-apple-isolated-on-white-600w-1727544364.jpg",
           price: 2,
+          stocked: true,
         },
         {
           name: "orange",
+          url: "https://thumbs.dreamstime.com/b/sliced-orange-fruit-leaves-isolated-white-23331258.jpg",
           price: 3,
+          stocked: false,
         },
         {
           name: "banana",
+          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/2324px-Banana-Single.jpg",
           price: 4,
+          stocked: true,
         },
       ],
     };
