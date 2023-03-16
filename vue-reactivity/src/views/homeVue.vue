@@ -47,6 +47,12 @@ export default {
           price: 4,
           stocked: true,
         },
+        {
+          name: "broccoli",
+          url: "https://i5.walmartimages.com/asr/c721459d-3826-4461-9e79-c077d5cf191e_3.ca214f10bb3c042f473588af8b240eca.jpeg",
+          price: 5,
+          stocked: false,
+        },
       ],
     };
   },

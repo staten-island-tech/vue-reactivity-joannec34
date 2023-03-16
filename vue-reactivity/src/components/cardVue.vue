@@ -27,9 +27,11 @@ export default {
 
 <style scoped>
 div {
-  background-color: aqua;
+  background-color: lightpink;
   padding: 20px;
   margin: 20px;
+  height: 300px;
+  width: 200px;
 }
 img {
   height: 100px;
