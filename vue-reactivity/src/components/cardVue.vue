@@ -5,6 +5,9 @@
     <img :src="image" alt="" />
     <h2 v-if="stocked">{{ name }} is in stock</h2>
     <h2 v-else>{{ name }} is not in stock</h2>
+    <button @click="addCount()">add to cart</button>
+    <button @click="subCount()">remove from cart</button>
+    <h2>{{ count }}</h2>
   </div>
 </template>
 
@@ -17,9 +20,19 @@ export default {
     stocked: Boolean,
     image: String,
   },
-  computed: {
-    getImage: function () {
-      return this.image;
+  data() {
+    return {
+      count: 0,
+    };
+  },
+  methods: {
+    addCount() {
+      this.count++;
+    },
+    subCount() {
+      if (this.count != 0) {
+        this.count--;
+      }
     },
   },
 };
@@ -28,9 +41,10 @@ export default {
 <style scoped>
 div {
   background-color: lightpink;
+  text-align: center;
   padding: 20px;
   margin: 20px;
-  height: 300px;
+  height: 400px;
   width: 200px;
 }
 img {

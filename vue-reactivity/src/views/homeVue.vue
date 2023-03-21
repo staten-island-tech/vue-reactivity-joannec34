@@ -1,6 +1,6 @@
 <template>
   <headerVue title="hello" />
-  <buttonVue></buttonVue>
+  <cartVue></cartVue>
 
   <div class="cards">
     <cardVue
@@ -15,14 +15,14 @@
 </template>
 
 <script>
-import buttonVue from "../components/buttonVue.vue";
+import cartVue from "../components/cartVue.vue";
 import headerVue from "../components/headerVue.vue";
 import cardVue from "../components/cardVue.vue";
 
 export default {
   name: "homeVue",
   components: {
-    buttonVue,
+    cartVue,
     headerVue,
     cardVue,
   },
@@ -60,6 +60,15 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: palegoldenrod;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
 .cards {
   display: flex;
   justify-content: center;
