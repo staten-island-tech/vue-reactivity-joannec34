@@ -1,23 +1,32 @@
 <template>
   <headerVue title="hello" />
-  <cartVue></cartVue>
+  <cartVue
+    v-for="product in store.cart"
+    :key="product.name"
+    :name="product.name"
+    :price="product.price"
+    :count="product.count"
+  ></cartVue>
 
-  <div class="cards">
+  <div class="gallery">
     <cardVue
-      v-for="product in products"
+      v-for="product in store.products"
       :key="product.name"
       :name="product.name"
       :price="product.price"
-      :stocked="product.stocked"
       :image="product.url"
     />
+    <buttonVue></buttonVue>
   </div>
 </template>
 
 <script>
+import { store } from "../store";
+import buttonVue from "../components/buttonVue.vue";
 import cartVue from "../components/cartVue.vue";
 import headerVue from "../components/headerVue.vue";
 import cardVue from "../components/cardVue.vue";
+import ButtonVue from "../components/buttonVue.vue";
 
 export default {
   name: "homeVue",
@@ -25,35 +34,11 @@ export default {
     cartVue,
     headerVue,
     cardVue,
+    ButtonVue,
   },
   data() {
     return {
-      products: [
-        {
-          name: "apple",
-          url: "https://www.shutterstock.com/image-photo/red-apple-isolated-on-white-600w-1727544364.jpg",
-          price: 2,
-          stocked: true,
-        },
-        {
-          name: "orange",
-          url: "https://thumbs.dreamstime.com/b/sliced-orange-fruit-leaves-isolated-white-23331258.jpg",
-          price: 3,
-          stocked: false,
-        },
-        {
-          name: "banana",
-          url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/2324px-Banana-Single.jpg",
-          price: 4,
-          stocked: true,
-        },
-        {
-          name: "broccoli",
-          url: "https://i5.walmartimages.com/asr/c721459d-3826-4461-9e79-c077d5cf191e_3.ca214f10bb3c042f473588af8b240eca.jpeg",
-          price: 5,
-          stocked: false,
-        },
-      ],
+      store,
     };
   },
 };
@@ -69,7 +54,7 @@ h2 {
   text-align: center;
 }
 
-.cards {
+.gallery {
   display: flex;
   justify-content: center;
 }

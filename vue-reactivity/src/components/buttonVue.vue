@@ -1,22 +1,21 @@
 <template>
-  <h2>{{ name }}</h2>
-  <h2>count: {{ count }}</h2>
+  <button @click="addCart()">add to cart</button>
 </template>
 
 <script>
 import { store } from "../store";
 
 export default {
-  name: "cartVue",
+  name: "buttonVue",
   data() {
     return {
       store,
     };
   },
-  props: {
-    name: String,
-    price: Number,
-    count: Number,
+  methods: {
+    addCart() {
+      store.cart.push(store.products.name);
+    },
   },
 };
 </script>
