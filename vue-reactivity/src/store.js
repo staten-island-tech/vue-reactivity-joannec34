@@ -6,7 +6,6 @@ export const store = reactive({
       name: "apple",
       url: "https://www.shutterstock.com/image-photo/red-apple-isolated-on-white-600w-1727544364.jpg",
       price: 2,
-      count: 0,
     },
     {
       name: "orange",
@@ -24,5 +23,5 @@ export const store = reactive({
       price: 5,
     },
   ],
-  cart: [],
+  cart: "hello",
 });

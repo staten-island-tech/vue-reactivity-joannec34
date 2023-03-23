@@ -1,6 +1,5 @@
 <template>
-  <h2>{{ name }}</h2>
-  <h2>count: {{ count }}</h2>
+  <h2>{{ store.cart }}</h2>
 </template>
 
 <script>
@@ -15,10 +14,6 @@ export default {
   },
   props: {
     name: String,
-    price: Number,
-    count: Number,
   },
 };
 </script>
-
-<style scoped></style>

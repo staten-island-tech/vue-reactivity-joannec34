@@ -13,11 +13,9 @@ export default {
     };
   },
   methods: {
-    addCart() {
-      store.cart.push(store.products.name);
-    },
+    addCart() {},
   },
 };
 </script>
 
-<style scoped></style>
+<style></style>

@@ -3,23 +3,22 @@
     <h1>{{ name }}</h1>
     <h2>${{ price }}</h2>
     <img :src="image" alt="" />
+    <p><buttonVue></buttonVue></p>
   </div>
 </template>
 
 <script>
-import { store } from "../store";
+import buttonVue from "../components/buttonVue.vue";
 
 export default {
   name: "cardVue",
+  components: {
+    buttonVue,
+  },
   props: {
     name: String,
     price: Number,
     image: String,
-  },
-  data() {
-    return {
-      store,
-    };
   },
 };
 </script>
@@ -30,7 +29,7 @@ export default {
   text-align: center;
   padding: 20px;
   margin: 20px;
-  height: 400px;
+  height: 300px;
   width: 200px;
 }
 img {
