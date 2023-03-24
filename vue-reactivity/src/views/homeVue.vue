@@ -1,6 +1,11 @@
 <template>
   <headerVue title="hello" />
-  <cartVue></cartVue>
+  <cartVue
+    v-for="product in store.cart"
+    :key="product.name"
+    :name="product.name"
+    :price="product.price"
+  />
 
   <div class="gallery">
     <cardVue

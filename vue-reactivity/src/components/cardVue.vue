@@ -3,11 +3,12 @@
     <h1>{{ name }}</h1>
     <h2>${{ price }}</h2>
     <img :src="image" alt="" />
-    <p><buttonVue></buttonVue></p>
+    <p><buttonVue @click="addCart()" /></p>
   </div>
 </template>
 
 <script>
+import { store } from "../store";
 import buttonVue from "../components/buttonVue.vue";
 
 export default {
@@ -19,6 +20,20 @@ export default {
     name: String,
     price: Number,
     image: String,
+  },
+  data() {
+    return {
+      store,
+    };
+  },
+  methods: {
+    addCart() {
+      store.cart.push({
+        name: this.name,
+        price: this.price,
+      });
+    },
+    totalCost() {},
   },
 };
 </script>

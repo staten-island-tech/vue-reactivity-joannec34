@@ -23,5 +23,5 @@ export const store = reactive({
       price: 5,
     },
   ],
-  cart: "hello",
+  cart: [],
 });
