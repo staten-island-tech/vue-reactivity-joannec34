@@ -11,4 +11,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+h1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 8rem;
+}
+</style>

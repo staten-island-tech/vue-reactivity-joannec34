@@ -40,13 +40,18 @@ export default {
 </script>
 
 <style>
-body {
-  background-color: palegoldenrod;
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  text-align: center;
 }
 
-h1,
-h2 {
-  text-align: center;
+body {
+  background-color: palegoldenrod;
 }
 
 .gallery {

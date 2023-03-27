@@ -1,9 +1,9 @@
 <template>
   <div class="cards">
-    <h1>{{ name }}</h1>
-    <h2>${{ price }}</h2>
+    <h2>{{ name }}</h2>
+    <h3>${{ price }}</h3>
     <img :src="image" alt="" />
-    <p><buttonVue @click="addCart()" /></p>
+    <h4><buttonVue @click="addCart()" /></h4>
   </div>
 </template>
 
@@ -42,13 +42,14 @@ export default {
 .cards {
   background-color: lightpink;
   text-align: center;
-  padding: 20px;
-  margin: 20px;
-  height: 300px;
-  width: 200px;
+  font-size: 4rem;
+  padding: 2rem;
+  margin: 1rem;
+  height: 35rem;
+  width: 30rem;
 }
 img {
-  height: 100px;
+  height: 20rem;
   width: auto;
 }
 </style>
