@@ -1,11 +1,13 @@
 <template>
   <headerVue title="hello" />
-  <cartVue
-    v-for="product in store.cart"
-    :key="product.name"
-    :name="product.name"
-    :price="product.price"
-  />
+  <div>
+    <cartVue
+      v-for="product in store.cart"
+      :key="product.name"
+      :name="product.name"
+      :price="product.price"
+    />
+  </div>
 
   <div class="gallery">
     <cardVue
@@ -48,6 +50,7 @@ body,
   box-sizing: border-box;
   font-size: 62.5%;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 body {

@@ -1,5 +1,5 @@
 <template>
-  <button>add to cart</button>
+  <button>Add to Cart</button>
 </template>
 
 <script>
@@ -8,4 +8,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+button {
+  padding: 0.5rem;
+  background-color: cornflowerblue;
+  border: none;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+</style>
