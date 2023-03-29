@@ -40,7 +40,7 @@ export default {
 
 <style scoped>
 .cards {
-  background-color: lightpink;
+  background-color: greenyellow;
   text-align: center;
   font-size: 4rem;
   padding: 2rem;
