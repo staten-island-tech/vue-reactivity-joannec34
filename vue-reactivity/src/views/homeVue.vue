@@ -7,6 +7,7 @@
       :name="product.name"
       :price="product.price"
     />
+    <h2>TOTAL: ${{ store.total }}</h2>
   </div>
 
   <div class="gallery">
@@ -60,5 +61,9 @@ body {
 .gallery {
   display: flex;
   justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
 }
 </style>

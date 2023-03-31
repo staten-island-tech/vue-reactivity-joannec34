@@ -32,8 +32,8 @@ export default {
         name: this.name,
         price: this.price,
       });
+      store.total += this.price;
     },
-    totalCost() {},
   },
 };
 </script>
@@ -43,7 +43,6 @@ export default {
   background-color: greenyellow;
   text-align: center;
   font-size: 4rem;
-  padding: 2rem;
   margin: 1rem;
   height: 35rem;
   width: 30rem;

@@ -1,5 +1,5 @@
 <template>
-  <h2>{{ name }}, {{ price }}</h2>
+  <h2>{{ name }}</h2>
 </template>
 
 <script>
@@ -14,13 +14,8 @@ export default {
   },
   props: {
     name: String,
-    price: Number,
   },
 };
 </script>
 
-<style scoped>
-h2 {
-  font-size: 2rem;
-}
-</style>
+<style scoped></style>
