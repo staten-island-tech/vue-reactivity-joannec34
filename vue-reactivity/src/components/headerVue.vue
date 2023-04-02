@@ -13,7 +13,14 @@ export default {
 
 <style scoped>
 h1 {
-  font-family: "Bebas Neue", cursive;
   font-size: 8rem;
+}
+.top-bar {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: bold;
 }
 </style>

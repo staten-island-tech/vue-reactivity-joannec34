@@ -3,7 +3,7 @@
     <h2>{{ name }}</h2>
     <h3>${{ price }}</h3>
     <img :src="image" alt="" />
-    <h4><buttonVue @click="addCart()" /></h4>
+    <p><buttonVue @click="addCart()" title="Add to Cart" /></p>
   </div>
 </template>
 
@@ -40,15 +40,25 @@ export default {
 
 <style scoped>
 .cards {
-  background-color: greenyellow;
+  background-color: #f9dce0;
   text-align: center;
   font-size: 4rem;
+  padding-top: 1rem;
   margin: 1rem;
   height: 35rem;
   width: 30rem;
+  border: solid #ad7d79 0.5rem;
+  border-radius: 2rem;
 }
 img {
   height: 20rem;
-  width: auto;
+  width: 20rem;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 </style>

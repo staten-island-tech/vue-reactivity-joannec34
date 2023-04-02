@@ -1,22 +1,22 @@
 <template>
-  <button>Add to Cart</button>
+  <button>{{ title }}</button>
 </template>
 
 <script>
 export default {
   name: "buttonVue",
+  props: {
+    title: String,
+  },
 };
 </script>
 
 <style scoped>
 button {
-  padding: 0.5rem;
-  background-color: cornflowerblue;
+  font-size: 1.5rem;
+  padding: 1rem;
   border: none;
-  transition: 0.2s;
-}
-
-button:hover {
-  transform: scale(1.1);
+  background-color: #fcfcf6;
+  border-radius: 1rem;
 }
 </style>
