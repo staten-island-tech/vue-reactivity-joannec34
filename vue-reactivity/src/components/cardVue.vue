@@ -43,8 +43,8 @@ export default {
   background-color: #f9dce0;
   text-align: center;
   font-size: 4rem;
-  padding-top: 1rem;
-  margin: 1rem;
+  padding: 1rem;
+  margin: 2rem;
   height: 35rem;
   width: 30rem;
   border: solid #ad7d79 0.5rem;
@@ -56,9 +56,16 @@ img {
   object-position: center;
   object-fit: cover;
   border-radius: 1rem;
+  margin-top: 0.5rem;
 }
 
-button:hover {
-  transform: scale(1.1);
+.cards:hover {
+  transform: scale(1.05);
 }
+
+button {
+  background-color: #f9dce0;
+  font-size: 2rem;
+}
+
 </style>

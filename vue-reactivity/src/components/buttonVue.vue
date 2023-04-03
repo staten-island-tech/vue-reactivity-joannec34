@@ -13,10 +13,14 @@ export default {
 
 <style scoped>
 button {
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 2rem;
+  padding: 0.5rem;
   border: none;
   background-color: #fcfcf6;
-  border-radius: 1rem;
+}
+
+button:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 </style>

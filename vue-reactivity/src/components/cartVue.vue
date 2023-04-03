@@ -2,6 +2,7 @@
   <div class="cart">
     <buttonVue v-if="toggled" @click="toggleCart" title="Hide Cart" />
     <buttonVue v-else @click="toggleCart" title="Show Cart" />
+    <buttonVue @click="resetCart" title="Reset Cart" />
     <div v-if="toggled">
       <cartItems
         v-for="product in store.cart"
@@ -37,6 +38,10 @@ export default {
         this.toggled = true;
       } else this.toggled = false;
     },
+    resetCart: function () {
+      store.total = 0;
+      store.cart = [];
+    },
   },
 };
 </script>
@@ -58,6 +63,6 @@ export default {
 h2,
 button {
   font-size: 2rem;
-  margin: 1rem;
+  margin: 2rem;
 }
 </style>
